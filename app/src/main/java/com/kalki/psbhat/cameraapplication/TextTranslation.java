@@ -32,7 +32,7 @@ public class TextTranslation extends AppCompatActivity {
     Spinner spinner;
     String[] lanuageCodes;
     String[] lanuages;
-    public static final GoogleClientRequestInitializer KEY_INITIALIZER = new TranslateRequestInitializer("AIzaSyByiGb0x-NGhEuO4a0DaHd8E6oVnHHXqq0");
+    public static final GoogleClientRequestInitializer KEY_INITIALIZER = new TranslateRequestInitializer("your-api-key");
 
 
     @Override
