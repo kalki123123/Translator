@@ -64,7 +64,7 @@ public class OpenCamera extends AppCompatActivity {
     Spinner spinner;
     String[] lanuageCodes;
     String[] lanuages;
-    public static final GoogleClientRequestInitializer KEY_INITIALIZER = new TranslateRequestInitializer("AIzaSyByiGb0x-NGhEuO4a0DaHd8E6oVnHHXqq0");
+    public static final GoogleClientRequestInitializer KEY_INITIALIZER = new TranslateRequestInitializer("your-api-key");
     private Translate.Builder builder;
     List<EntityAnnotation> EnglishResult ;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -254,7 +254,7 @@ public class OpenCamera extends AppCompatActivity {
                     null);
 
             visionBuilder.setVisionRequestInitializer(
-                    new VisionRequestInitializer("AIzaSyByiGb0x-NGhEuO4a0DaHd8E6oVnHHXqq0"));
+                    new VisionRequestInitializer("your-api-key"));
 
             final Vision vision = visionBuilder.build();
             Feature desiredFeature = new Feature();
