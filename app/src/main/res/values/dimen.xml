@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normalTextSize">15sp</dimen>
+    <dimen name="resultTextSize">20sp</dimen>
+    <dimen name="topTextsize">7sp</dimen>
+    <dimen name="languagepadding">7dp</dimen>
+    <dimen name="indeterminate_progress_size">32dp</dimen>
+    <dimen name="floatingButtonPadding">10dp</dimen>
+    <dimen name="floatingButtonMargin">13dp</dimen>
+    <dimen name="ButtonMargin">7dp</dimen>
+    <dimen name="ButtonSideMargin">15dp</dimen>
+</resources>

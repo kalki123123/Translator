@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall_1"
+    android:orientation="vertical"
+    tools:context="com.kalki.psbhat.cameraapplication.Home">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/logo"
+                app:srcCompat="@drawable/ic_logo" />
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:keepScreenOn="true"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:layout_marginRight="40dp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:layout_marginEnd="40dp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/floatingButtonMargin"
+                android:background="@drawable/border_round_custom_toast"
+                android:entries="@array/lanugae_arrray"
+                android:layout_gravity="center_vertical|end"
+                android:keepScreenOn="true"
+                android:spinnerMode="dialog"
+                android:textColor="@color/colorText" />
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_result_layout"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/enterTranslateText"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="8sp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/languageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/border_result_layout"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/floatingButtonMargin"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                android:drawableRight="@drawable/ic_selected_language"
+                android:gravity="center"
+                android:text="English"
+                android:textColor="@color/colorText"
+                android:drawableEnd="@drawable/ic_selected_language" />
+
+            <Button
+                android:textColor="@color/colorText"
+                android:id="@+id/anyLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                 />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/textOutput"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:background="@drawable/border_result_layout"
+            android:hint="@string/resultTranslateText"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <!--
+        <fragment
+            android:id="@+id/youtube_player_fragment"
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        -->
+
+    </LinearLayout>
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8117488179190169/5289476664">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

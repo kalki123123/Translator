@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/resultTextSize"
+        android:layout_margin="@dimen/ButtonMargin"
+        android:id="@+id/englishResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="English"
+         />
+    <TextView
+        android:textSize="@dimen/normalTextSize"
+        android:layout_margin="@dimen/ButtonMargin"
+        android:id="@+id/spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/spacer"
+        />
+    <TextView
+        android:text="German"
+        android:textSize="@dimen/resultTextSize"
+        android:layout_margin="@dimen/ButtonMargin"
+        android:id="@+id/germanResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+         />
+
+</LinearLayout>

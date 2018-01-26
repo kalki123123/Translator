@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall_1"
+    tools:context="com.kalki.psbhat.cameraapplication.OpenCamera">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/logo"
+                        app:srcCompat="@drawable/ic_logo" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/appName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:text="@string/app_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="top"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_margin="@dimen/floatingButtonMargin"
+                    android:background="@drawable/border_round_custom_toast"
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:entries="@array/lanugae_arrray"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:spinnerMode="dialog"
+                    android:textColor="@color/colorText" />
+
+                    <ImageButton
+                        android:padding="3dp"
+                        android:id="@+id/history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/floatingButtonMargin"
+                        android:background="@drawable/button_template"
+                        app:srcCompat="@drawable/ic_history" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/capturedImage"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/border_round_custom_toast"
+                android:contentDescription="@string/capturedImage"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/retakePicture"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/ButtonSideMargin"
+                android:paddingLeft="@dimen/ButtonSideMargin"
+                android:layout_marginTop="@dimen/floatingButtonMargin"
+                android:layout_marginBottom="@dimen/floatingButtonMargin"
+                android:background="@drawable/button_template"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_camera_icon"
+                android:text="@string/retake_picture"
+                android:tint="@android:color/background_dark"
+                android:drawableLeft="@android:drawable/ic_menu_camera"
+                android:paddingEnd="@dimen/ButtonSideMargin" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:padding="@dimen/languagepadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:keepScreenOn="true"
+                    android:text="@string/english"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/normalTextSize"
+                    />
+                <TextView
+                    android:id="@+id/selectedLanguage"
+                    android:padding="@dimen/languagepadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:keepScreenOn="true"
+                    android:text="@string/german"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/normalTextSize"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@drawable/border_result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/englishResult1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+                <TextView
+                    android:textSize="@dimen/normalTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/spacer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/spacer"
+                    />
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/germanResult1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/border_result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/englishResult2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+                <TextView
+                    android:textSize="@dimen/normalTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/spacer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/spacer"
+                    />
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/germanResult2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/border_result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/englishResult3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+                <TextView
+                    android:textSize="@dimen/normalTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/spacer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/spacer"
+                    />
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/germanResult3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/border_result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/englishResult4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+                <TextView
+                    android:textSize="@dimen/normalTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/spacer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/spacer"
+                    />
+                <TextView
+                    android:textSize="@dimen/resultTextSize"
+                    android:layout_margin="@dimen/ButtonMargin"
+                    android:id="@+id/germanResult4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    />
+
+            </LinearLayout>
+
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-8117488179190169/5289476664">
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>
